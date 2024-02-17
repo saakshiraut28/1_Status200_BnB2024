@@ -1,32 +1,24 @@
 /** @format */
 
 const express = require("express");
-
 const router = express.Router();
+const {
+  getVideos,
+  getVideo,
+  createVideo,
+  deleteVideo,
+} = require("../controllers/videoController");
 
 // GET all videos
-router.get("/", (req, res) => {
-  res.json({ msg: "Videos fetched" });
-});
+router.get("/", getVideos);
 
 //GET a single video
-router.get("/:id", (req, res) => {
-  res.status(200).json({ msg: "Video fetched" });
-});
+router.get("/:id", getVideo);
 
 // POST a new video
-router.post("/", (req, res) => {
-  res.status(200).json({ msg: "Videos created" });
-});
+router.post("/", createVideo);
 
 // DELETE a video
-router.delete("/:id", (req, res) => {
-  res.status(200).json({ msg: "Videos deleted" });
-});
-
-// UPDATE a video
-router.patch("/:id", (req, res) => {
-  res.status(200).json({ msg: "Videos Updated" });
-});
+router.delete("/:id", deleteVideo);
 
 module.exports = router;
