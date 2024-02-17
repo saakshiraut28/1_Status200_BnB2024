@@ -1,4 +1,5 @@
 import { ArrowLeft, Bell, Menu, Mic, Search, Upload, User } from "lucide-react"
+import logo from "../imgs/logohe.png"
 import { Button } from "../components/Button"
 import { useState } from "react"
 import { useSidebarContext } from "../contexts/SidebarContext"
