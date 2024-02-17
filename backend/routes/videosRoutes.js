@@ -8,6 +8,10 @@ const {
   createVideo,
   deleteVideo,
 } = require("../controllers/videoController");
+const requireAuth = require("../middleware/requireAuth");
+
+// User needs to login before using
+const requireAuth = require("../middleware/requireAuth");
 
 // GET all videos
 router.get("/", getVideos);
