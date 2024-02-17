@@ -15,12 +15,13 @@ app.use("/", (req, res, next) => {
 
 //Routes
 app.use("/api/videos", videoRoutes);
+app.use("/api/user", userRoutes);
 
 mongo
   .connect(process.env.m_URI)
   .then(() => {
     app.listen(process.env.PORT, () => {
-      console.log("Listening to Port ", process.env.PORT);
+      console.log("Listening to Port", process.env.PORT);
     });
   })
   .catch((error) => {

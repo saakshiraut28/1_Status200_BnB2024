@@ -3,6 +3,14 @@
 const Videos = require("../models/videoModel");
 const mongoose = require("mongoose");
 
+// get videos for a particular user
+const getCurrentVideos = async (req, res) => {
+  const user_id = req.user._id;
+  const video = await Videos.find({ user_id }).sort({ createdAt: -1 });
+
+  res.status(200).json(video);
+};
+
 // get all videos
 const getVideos = async (req, res) => {
   const video = await Videos.find({}).sort({ createdAt: -1 });
