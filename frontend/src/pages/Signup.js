@@ -6,6 +6,11 @@ import { useSignup } from "../hooks/useSignup";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState();
+  const [description, setDescription] = useState("");
+  const [specialist, setSpecialist] = useState("");
+  const [address, setAddress] = useState("");
   const { signup, error, isLoading } = useSignup();
 
   const handleSubmit = async (e) => {
@@ -25,8 +30,8 @@ const Signup = () => {
         <input
           className="border-b-2 outline-none hover:border-black"
           type="email"
-          onChange={(e) => setEmail(e.target.value)}
           value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
       <div className="md:space-x-2 py-2">
@@ -34,8 +39,53 @@ const Signup = () => {
         <input
           className="border-b-2 outline-none hover:border-black"
           type="password"
-          onChange={(e) => setPassword(e.target.value)}
           value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <div className="md:space-x-2 py-2">
+        <label className="title text-md font-medium">Full Name:</label>
+        <input
+          className="border-b-2 outline-none hover:border-black"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      <div className="md:space-x-2 py-2">
+        <label className="title text-md font-medium">Contact:</label>
+        <input
+          className="border-b-2 outline-none hover:border-black"
+          type="text"
+          value={contact}
+          onChange={(e) => setContact(e.target.value)}
+        />
+      </div>
+      <div className="md:space-x-2 py-2">
+        <label className="title text-md font-medium">Description:</label>
+        <input
+          className="border-b-2 outline-none hover:border-black"
+          type="text"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+      </div>
+      <div className="md:space-x-2 py-2">
+        <label className="title text-md font-medium">Specialist:</label>
+        <input
+          className="border-b-2 outline-none hover:border-black"
+          type="text"
+          value={specialist}
+          onChange={(e) => setSpecialist(e.target.value)}
+        />
+      </div>
+      <div className="md:space-x-2 py-2">
+        <label className="title text-md font-medium">Address:</label>
+        <input
+          className="border-b-2 outline-none hover:border-black"
+          type="text"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
         />
       </div>
       <button

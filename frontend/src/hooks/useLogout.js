@@ -1,11 +1,11 @@
 /** @format */
 
 import { useAuthContext } from "./useAuthContext";
-import { useWorkoutsContext } from "./useWorkoutsContext";
+import { useVideoContext } from "./useVideoContext";
 
 export const useLogout = () => {
   const { dispatch } = useAuthContext();
-  const { dispatch: dispatchWorkouts } = useWorkoutsContext();
+  const { dispatch: dispatchVideos } = useVideoContext();
 
   const logout = () => {
     // remove user from storage
@@ -13,7 +13,7 @@ export const useLogout = () => {
 
     // dispatch logout action
     dispatch({ type: "LOGOUT" });
-    dispatchWorkouts({ type: "SET_WORKOUTS", payload: null });
+    dispatchVideos({ type: "SET_VIDEO", payload: null });
   };
 
   return { logout };
