@@ -1,7 +1,7 @@
 export const subscriptions = [
     {
-        channelName: "constGenius",
-        id: "constGenius",
+        channelName: "Unicorn Deck",
+        id: "unicorndeck",
         imgUrl:
             "https://yt3.googleusercontent.com/34iWjSG2HTPH6ZrbMgNm2rBZ1V2JFV0Mhqh0LRz-4io54KaVapieB0E08YoM6qWgwKS2vDtW=s900-c-k-c0x00ffffff-no-rj",
     },
