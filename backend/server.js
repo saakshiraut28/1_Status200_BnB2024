@@ -3,11 +3,18 @@ require("dotenv").config();
 const express = require("express");
 const mongo = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
-
+const videoRoutes = require("./routes/videosRoutes");
 // Initializing express App
 const app = express();
 
 app.use(express.json());
+
+app.use("/", (req, res, next) => {
+  next();
+});
+
+//Routes
+app.use("/api/videos", videoRoutes);
 
 mongo
   .connect(process.env.m_URI)
