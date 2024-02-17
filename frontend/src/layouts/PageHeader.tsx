@@ -52,7 +52,7 @@ const PageHeader = () => {
                     <Bell />
                 </Button>
                 <Button size="icon" variant="ghost">
-                    <User />
+                    <a href="/signup"><User /></a>
                 </Button>
             </div>
 
