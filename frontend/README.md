@@ -1,11 +1,70 @@
-# Youtube Clone with React Tailwind and TypeScript in Hindi | Youtube Clone Step by Step
+# Getting Started with Create React App
 
-Youtube Tutorial Link: https://youtu.be/TYP_j74A2P8
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Youtube Clone](public/YoutubeClone.png)
+## Available Scripts
 
-The YouTube Home Page Clone with React, Tailwind CSS, and TypeScript is a focused project that recreates the iconic landing page of the YouTube platform. Leveraging the power of React for dynamic UI components, Tailwind CSS for rapid and responsive styling, and TypeScript for type-safe code, this clone provides developers with an opportunity to dissect and recreate the familiar YouTube home page experience.
+In the project directory, you can run:
 
-Developers can explore the intricacies of building a dynamic video grid, implementing features such as video thumbnails, titles, and view counts. The responsive design, facilitated by Tailwind CSS, ensures that the clone adapts seamlessly to various screen sizes, providing an authentic user experience.
+### `npm start`
 
-By concentrating on the home page aspect, this project allows developers to delve into the core functionalities of a widely-used platform, honing their React skills while incorporating the benefits of TypeScript for a more robust codebase. Whether you're a beginner looking to grasp fundamental concepts or an experienced developer aiming to enhance your React proficiency, this YouTube Home Page Clone provides a focused and practical learning experience.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
