@@ -2,9 +2,12 @@
 require("dotenv").config();
 const express = require("express");
 const mongo = require("mongoose");
+const userRoutes = require("./routes/userRoutes");
 
 // Initializing express App
 const app = express();
+
+app.use(express.json());
 
 mongo
   .connect(process.env.m_URI)
