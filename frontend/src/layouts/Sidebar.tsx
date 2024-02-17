@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, Pen, Stethoscope, History, Home,} from "lucide-react";
+import { ChevronDown, ChevronUp,  Pen, Stethoscope,  History, Home } from "lucide-react";
 import { Children, ElementType, ReactNode, useState } from "react";
 import { Button, buttonStyles } from "../components/Button";
 import { twMerge } from "tailwind-merge";
@@ -10,8 +10,19 @@ export function Sidebar() {
 
     return (
         <>
+            <aside className={`sticky top-0 overflow-y-auto scrollbar-hidden pb-4 flex flex-col ml-1 ${isLargeOpen ? "lg:hidden" : "lg:flex"}`}>
+                <SmallSidebarItem Icon={Home} title="Home" url="/home" />
+                <SmallSidebarItem Icon={Stethoscope} title="Dr. Profile" url="/profile" />
+                <SmallSidebarItem
+                    Icon={Pen}
+                    title="Blog"
+                    url="/blog"
+                />
+                <SmallSidebarItem Icon={History} title="History" url="/history" />
+            </aside>
+
             {isSmallOpen && (
-                <div onClick={close} className="lg:hidden fixed inset-0 z-[999] bg-secondary-dark opacity-100" />
+                <div onClick={close} className="lg:hidden fixed inset-0 z-[999] bg-secondary-dark opacity-50" />
             )}
 
             <aside className={`w-56 lg:sticky absolute top-0 overflow-y-auto scrollbar-hidden pb-4 flex-col gap-2 px-2 ${isLargeOpen ? "lg:flex" : "lg:hidden"} ${isSmallOpen ? "flex z-[999] bg-white max-h-screen" : "hidden"}`}>
@@ -45,17 +56,33 @@ export function Sidebar() {
                         url="/history"
                     />
 
+                    
                 </LargeSidebarSection>
 
                 <hr />
 
+                
             </aside>
         </>
 
     )
 }
 
+type SmallSidebarItemProps = {
+    Icon: ElementType
+    title: string
+    url: string
+}
 
+function SmallSidebarItem({ Icon, title, url }: SmallSidebarItemProps) {
+    return (
+        <a href={url} className={twMerge(buttonStyles({ variant: "ghost" }), "py-4 px-1 flex flex-col items-center rounded-lg gap-1"
+        )}>
+            <Icon className="w-6 h-6" />
+            <div className="text-sm">{title}</div>
+        </a>
+    )
+}
 
 type LargeSidebarSectionProps = {
     children: ReactNode
