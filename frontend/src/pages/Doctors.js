@@ -20,7 +20,7 @@ const GetDoctors = () => {
   }, []);
   return (
     <>
-      <div className="text-4xl text-center font-semibold">
+      <div className="text-4xl text-center font-semibold py-10">
         Say hi, to the Doctors! 🙋‍♀️
       </div>
       <div className="grid lg:grid-cols-4 grid-cols-1">
