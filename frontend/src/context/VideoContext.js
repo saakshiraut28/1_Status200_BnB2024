@@ -12,7 +12,7 @@ export const videoReducer = (state, action) => {
       };
     case "CREATE_VIDEO":
       return {
-        videos: [action.payload, ...state.video],
+        videos: [action.payload, ...state.videos],
       };
     case "DELETE_VIDEO":
       return {
@@ -25,7 +25,7 @@ export const videoReducer = (state, action) => {
 
 export const VideoContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(videoReducer, {
-    videos: null,
+    videos: [],
   });
 
   return (
