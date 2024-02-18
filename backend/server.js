@@ -5,9 +5,11 @@ const mongo = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 const videoRoutes = require("./routes/videosRoutes");
 const showProfileRoutes = require("./routes/showProfileRoutes");
+
+const cors = require("cors");
 // Initializing express App
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
 app.use("/", (req, res, next) => {
