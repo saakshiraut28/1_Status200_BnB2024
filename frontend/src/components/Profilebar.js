@@ -6,7 +6,9 @@ const ProfileBar = ({ doctor }) => {
   const [doctors, setDoctors] = useState();
   useEffect(() => {
     const fetchDoctors = async () => {
-      const response = await fetch("/api/doctors/");
+      const response = await fetch(
+        `https://healthdeck.onrender.com/api/doctors`
+      );
       const json = await response.json();
 
       if (response.ok) {

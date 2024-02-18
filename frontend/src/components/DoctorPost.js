@@ -16,12 +16,15 @@ const DoctorPost = ({ video }) => {
       return;
     }
 
-    const response = await fetch("/api/videos/" + video._id, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      `https://healthdeck.onrender.com/api/videos` + video._id,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
+    );
     const json = await response.json();
 
     if (response.ok) {

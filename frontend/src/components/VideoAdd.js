@@ -24,7 +24,7 @@ const VideoAdd = () => {
 
     const video = { link, description, tips };
 
-    const response = await fetch("/api/videos", {
+    const response = await fetch(`https://healthdeck.onrender.com/api/videos`, {
       method: "POST",
       body: JSON.stringify(video),
       headers: {
