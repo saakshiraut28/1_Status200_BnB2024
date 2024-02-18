@@ -23,7 +23,6 @@ const Navbar = () => {
         <nav className="flex ">
           {user && (
             <div className="font-medium space-x-4">
-              <Link to="/doctors">Doctors</Link>
               <span>Welcome!</span>
               <button onClick={handleClick}>Log out</button>
             </div>

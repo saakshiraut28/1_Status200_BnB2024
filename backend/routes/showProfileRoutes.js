@@ -1,5 +1,6 @@
 /** @format */
 const User = require("../models/userModel");
+const Video = require("../models/videoModel");
 const express = require("express");
 const router = express.Router();
 
@@ -10,15 +11,14 @@ router.get("/", async (req, res) => {
 });
 
 //GET a single doctor
-router.get("/:id", async (req, res) => {
-  const { id } = req.params;
-  const user = await User.findById(id);
+router.get("/videos", async (req, res) => {
+  const video = await Video.find({}).sort({ createdAt: -1 });
 
-  if (!user) {
+  if (!video) {
     return res.status(404).json({ error: "No such doctor found" });
   }
 
-  res.status(200).json(user);
+  res.status(200).json(video);
 });
 
 module.exports = router;

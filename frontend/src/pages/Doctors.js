@@ -20,10 +20,17 @@ const GetDoctors = () => {
   }, []);
   return (
     <>
-      {doctors &&
-        doctors.map((doctor) => (
-          <ProfileBar key={doctor._id} doctor={doctor} />
-        ))}
+      <div className="text-4xl text-center font-semibold">
+        Say hi, to the Doctors! 🙋‍♀️
+      </div>
+      <div className="grid lg:grid-cols-4 grid-cols-1">
+        {doctors &&
+          doctors.map((doctor) => (
+            <div className="grid border border-2 m-2">
+              <ProfileBar key={doctor._id} doctor={doctor} />
+            </div>
+          ))}
+      </div>
     </>
   );
 };
