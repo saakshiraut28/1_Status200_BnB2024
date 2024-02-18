@@ -22,14 +22,44 @@ const ProfileBar = ({ doctor }) => {
           Have a talk
         </button>
         {show ? (
-          <div className="flex-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-10 py-4 bg-white border border-black font-bold h-[150px] items-center justify-center">
+          <div className="flex-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-10 py-4 bg-white border border-black font-bold h-[300px] items-center justify-center">
             <p className="text-right ">
               <a onClick={handleClick} href="#">
                 {" "}
                 X
               </a>
             </p>
-            <p className="pt-5">Functionality will be implemented soon. 🎊</p>
+            <div className="md:space-x-2 py-2">
+          <label className="title text-md font-medium">Name:</label>
+          <input
+            className="border-b-2 outline-none hover:border-black"
+            type="text"
+          />
+            </div>
+
+            <div className="md:space-x-2 py-2">
+          <label className="title text-md font-medium">Contact Number:</label>
+          <input
+            className="border-b-2 outline-none hover:border-black"
+            type="text"
+          />
+            </div>
+
+            <div className="md:space-x-2 py-2">
+          <label className="title text-md font-medium">Issue:</label>
+          <input
+            className="border-b-2 outline-none hover:border-black"
+            type="text"
+          />
+            </div>
+
+            <div className="md:space-x-2 py-2">
+          <label className="title text-md font-medium">Time:</label>
+          <input
+            className="border-b-2 outline-none hover:border-black"
+            type="datetime-local"
+          />
+            </div>
           </div>
         ) : (
           <></>
