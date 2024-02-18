@@ -11,7 +11,7 @@ const ProfileBar = ({ doctor }) => {
     <>
       <div className="lg:mx-10 mx-3 my-2 py-2 px-3 border space-y-2">
         <p className="font-semibold text-lg ">{doctor.email}</p>
-        <p className="font-mediumm ">Contact: {doctor.contact}</p>
+        <p className="font-mediumm ">Name: {doctor.contact}</p>
         <p className="font-mediumm ">Description: {doctor.description}</p>
         <p className="font-mediumm ">Specialist: {doctor.specialist}</p>
         <p className="font-mediumm ">Address: {doctor.address}</p>
