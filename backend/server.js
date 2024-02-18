@@ -4,6 +4,7 @@ const express = require("express");
 const mongo = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 const videoRoutes = require("./routes/videosRoutes");
+const showProfileRoutes = require("./routes/showProfileRoutes");
 // Initializing express App
 const app = express();
 
@@ -16,6 +17,7 @@ app.use("/", (req, res, next) => {
 //Routes
 app.use("/api/videos", videoRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/doctors", showProfileRoutes);
 
 mongo
   .connect(process.env.m_URI)
