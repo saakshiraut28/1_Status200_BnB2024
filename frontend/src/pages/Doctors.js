@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import ProfileBar from "../components/Profilebar";
+
 const GetDoctors = () => {
   const [doctors, setDoctors] = useState();
   useEffect(() => {
     const fetchDoctors = async () => {
-      const response = await fetch("/api/doctors/");
+      const response = await fetch(`/api/doctors`);
       const json = await response.json();
 
       if (response.ok) {
